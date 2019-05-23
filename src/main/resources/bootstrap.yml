@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    vault:
+      authentication: approle
+      host: 192.168.56.20
+      app-role:
+        role: demo-role
+        role-id: 564ff9ce-964a-afa9-584b-ccc7a15ddfb8
+        secret-id: 79356228-fe47-6b98-7f51-8c54e47db455
+      scheme: http
+      generic:
+        application-name: vault-demo
+        default-context: vault-demo
+  application:
+    name: vault-demo
+  profiles:
+    active: dev
